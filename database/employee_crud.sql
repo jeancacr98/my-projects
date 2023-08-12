@@ -21,7 +21,7 @@ CREATE TABLE employee (
     birth_date DATE,
 	marital_status_id INT,
 	position_id INT,
-	is_deleted BIT,
+	is_deleted BIT DEFAULT 0,
     FOREIGN KEY (marital_status_id) REFERENCES marital_status(marital_status_id),
 	FOREIGN KEY (position_id) REFERENCES position(position_id)
 );
